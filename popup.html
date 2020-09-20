@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Desenmascara.me Web Analyzer</title>
+    <script src="popup.js"></script>
+    <style>
+      body{
+        width: 400px;
+      }
+      button {        
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        background-color: #555555;
+        margin-bottom: 5px;
+      }
+      h1{
+        border-bottom: 1px solid rgb(202, 201, 201);
+      }
+      #loader {
+        border: 4px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 6px solid #3498db;
+        width: 40px;
+        height: 40px;
+        -webkit-animation: spin 1s linear infinite; /* Safari */
+        animation: spin 1s linear infinite;
+        margin: 0 auto;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .hide{
+        display: none;
+      }
+      .main{
+        padding: 20px;
+        text-align: center;
+      }
+      footer{        
+        border-top:  rgb(110, 110, 110);
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Desenmascara.me Web Analyzer</h1>
+    <div class="main">
+    <div id="loaderContainer" class="hide">
+      <p>Analyzing</p>
+      <div id="loader"></div>
+      <p>Please Wait...</p>
+    </div>
+    <button id="checkPage">Check this page now!</button>
+    <h3 id="result"></h3>
+	<br>
+	Or go to <a target="_blank" href="http://desenmascara.me">desenmascara.me<a>
+  </div>
+
+    <footer>
+      <a target="_blank" href="http://desenmascara.me"><img src="http://desenmascara.me/static/img/desenmascarame-logo.png"></a>
+    </footer>
+  </body>
+</html>
