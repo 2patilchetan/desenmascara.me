@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
       result.classList.add('hide');
       result.innerText = '';
       try {
-        fetch(`https://desenmascara.me/api/official/${url.hostname}`).then(response => {
+        fetch(`https://desenmascara.me/api/official/${url.hostname}`, {
+          mode: 'no-cors'
+        }).then(response => {
           loader.classList.add('hide');
           result.classList.remove('hide');
           if (response.status !== 200) {
@@ -22,7 +24,18 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
           }
           response.json().then(function (data) {
-            checkPageButton.innerText = data.result;
+            result.innerText = data.result;
+            switch (data.result) {
+              case 'FAKE':
+                result.classList.add('fake');
+                break;
+              case 'Not flagged':
+                result.classList.add('notFlagged');
+                break;
+              default:
+                result.classList.remove('notFlagged');
+                break;
+            }
           });
         }).catch(function (error) {
           result.innerText = 'Something went wrong.';

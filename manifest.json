@@ -7,7 +7,7 @@
    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr2ojKtLzjrupjabtw++qfONMhzchXlNJyTX8n4aO1xWUNw4NEtyRccO1IYrojLczf0tdmGTp1AvBdJzgpn1Bmm4taHSGAazbRgpCaA5esCUarflLQ568gCaZWGaZbBKY5ZpWsZPc2z4gmD6dO7XPbfRl3/XRrqXCyj4gPccmj00JA0NPx1EWL26+eZfiZoyboTDRAZC30VWU1aV7kit6M8aQn2Yiug7jGTtHdILaqT4c/PfiaJC2JJ2tYODSUCLoYBxpzozey2QgsRHlmd+N924Ig7SwhRwcRVxU+7dBVG0zaHDBFRV8wexH8ZsoTLyspgJgacilJPiD3+FcQ5qRbwIDAQAB",
    "manifest_version": 2,
    "name": "Desenmascara.me FAKE web verification Plugin",
-   "permissions": [ "activeTab", "http://desenmascara.me/*" ],
+   "permissions": [ "https://desenmascara.me/*" ,"http://desenmascara.me/*","activeTab"],
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "2.0"
 }
